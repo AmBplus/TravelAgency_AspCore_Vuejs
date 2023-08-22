@@ -5,37 +5,36 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BB1A20FF-8B6F-4691-818E-753850AD57CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.Core", "Core\TravelAgency.Core\TravelAgency.Core.csproj", "{397F878D-D847-46DD-B9AA-D2C8CBDB320D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelAgency.Core", "Core\TravelAgency.Core\TravelAgency.Core.csproj", "{397F878D-D847-46DD-B9AA-D2C8CBDB320D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{EFF96FE6-1272-4B67-B293-578A6C8AB3C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.Data", "Infrastructure\TravelAgency.Data\TravelAgency.Data.csproj", "{84E9BA3C-0D7C-4653-9C2B-4D330CB3583C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelAgency.Data", "Infrastructure\TravelAgency.Data\TravelAgency.Data.csproj", "{84E9BA3C-0D7C-4653-9C2B-4D330CB3583C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.Infrastructure", "Infrastructure\TravelAgency.Infrastructure\TravelAgency.Infrastructure.csproj", "{2C106918-D5CD-436E-A99F-01A5434722DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelAgency.Infrastructure", "Infrastructure\TravelAgency.Infrastructure\TravelAgency.Infrastructure.csproj", "{2C106918-D5CD-436E-A99F-01A5434722DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C1818C13-99AE-4D27-9CBF-921D8711DA79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Presentation\Api\Api.csproj", "{306CA6C0-6495-48E2-83F9-C14BBCF347B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Presentation\Api\Api.csproj", "{306CA6C0-6495-48E2-83F9-C14BBCF347B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B43CAF3F-8FA7-4CBC-A03B-2F9E4AE8B6C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.AspCore", "Shared\Base.AspCoreUtility\Base.AspCore.csproj", "{CE1CD691-6754-4506-B06D-F63D05E11700}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.AspCore", "Shared\Base.AspCoreUtility\Base.AspCore.csproj", "{CE1CD691-6754-4506-B06D-F63D05E11700}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Core", "Shared\Base.Core\Base.Core.csproj", "{455A0B74-E1A4-491A-9954-6A355ACD2AFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.Core", "Shared\Base.Core\Base.Core.csproj", "{455A0B74-E1A4-491A-9954-6A355ACD2AFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Infrastructure", "Shared\Base.Infrastructure\Base.Infrastructure.csproj", "{3F22A2DC-54BB-4B6A-96F8-B6BE111DB13A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.Infrastructure", "Shared\Base.Infrastructure\Base.Infrastructure.csproj", "{3F22A2DC-54BB-4B6A-96F8-B6BE111DB13A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Resourses", "Shared\Base.Resourses\Base.Resourses.csproj", "{4F1D1FDA-62B6-47AF-8FDF-9646099E6C07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.Resourses", "Shared\Base.Resourses\Base.Resourses.csproj", "{4F1D1FDA-62B6-47AF-8FDF-9646099E6C07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Shared", "Shared\Base.Shared\Base.Shared.csproj", "{DA0A315B-03F0-4318-812A-5370C6175EF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base.Shared", "Shared\Base.Shared\Base.Shared.csproj", "{DA0A315B-03F0-4318-812A-5370C6175EF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Travel.Shared", "Shared\Travel.Shared\Travel.Shared.csproj", "{5B37F7E6-3C0D-4842-AC56-291EFD3CBE83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{397F878D-D847-46DD-B9AA-D2C8CBDB320D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -74,6 +73,13 @@ Global
 		{DA0A315B-03F0-4318-812A-5370C6175EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA0A315B-03F0-4318-812A-5370C6175EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA0A315B-03F0-4318-812A-5370C6175EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B37F7E6-3C0D-4842-AC56-291EFD3CBE83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B37F7E6-3C0D-4842-AC56-291EFD3CBE83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B37F7E6-3C0D-4842-AC56-291EFD3CBE83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B37F7E6-3C0D-4842-AC56-291EFD3CBE83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{397F878D-D847-46DD-B9AA-D2C8CBDB320D} = {BB1A20FF-8B6F-4691-818E-753850AD57CA}
@@ -85,5 +91,8 @@ Global
 		{3F22A2DC-54BB-4B6A-96F8-B6BE111DB13A} = {B43CAF3F-8FA7-4CBC-A03B-2F9E4AE8B6C7}
 		{4F1D1FDA-62B6-47AF-8FDF-9646099E6C07} = {B43CAF3F-8FA7-4CBC-A03B-2F9E4AE8B6C7}
 		{DA0A315B-03F0-4318-812A-5370C6175EF1} = {B43CAF3F-8FA7-4CBC-A03B-2F9E4AE8B6C7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55CE7FD0-6369-4FE4-8279-48F906748015}
 	EndGlobalSection
 EndGlobal

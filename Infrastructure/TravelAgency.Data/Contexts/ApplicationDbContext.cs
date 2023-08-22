@@ -7,87 +7,87 @@ using TravelAgency.Core.Common.Interfaces;
 using TravelAgency.Core.Data;
 using TravelAgency.Core.Entities;
 
-namespace Travel.Data.Contexts
+namespace TravelAgency.Data.Contexts
 {
-  public class ApplicationDbContext : DbContext, IApplicationDbContext
-  {
-    private readonly IDateTime _dateTime;
-    private IDbContextTransaction _currentTransaction;
-
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-          : base(options)
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
-    }
+        private readonly IDateTime _dateTime;
+        private IDbContextTransaction _currentTransaction;
 
-    public DbSet<TourList> TourLists { get; set; }
-    public DbSet<TourPackage> TourPackages { get; set; }
-
-    public ApplicationDbContext(
-      DbContextOptions<ApplicationDbContext> options,
-      IDateTime dateTime) : base(options)
-    {
-      _dateTime = dateTime;
-    }
-
-    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
-    {
-      return base.SaveChangesAsync(cancellationToken);
-    }
-
-    public async Task BeginTransactionAsync()
-    {
-      if (_currentTransaction != null)
-      {
-        return;
-      }
-
-      _currentTransaction = await base.Database.BeginTransactionAsync(IsolationLevel.ReadCommitted).ConfigureAwait(false);
-    }
-
-    public async Task CommitTransactionAsync()
-    {
-      try
-      {
-        await SaveChangesAsync().ConfigureAwait(false);
-
-        _currentTransaction?.Commit();
-      }
-      catch
-      {
-        RollbackTransaction();
-        throw;
-      }
-      finally
-      {
-        if (_currentTransaction != null)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+              : base(options)
         {
-          _currentTransaction.Dispose();
-          _currentTransaction = null;
         }
-      }
-    }
 
-    public void RollbackTransaction()
-    {
-      try
-      {
-        _currentTransaction?.Rollback();
-      }
-      finally
-      {
-        if (_currentTransaction != null)
+        public DbSet<TourList> TourLists { get; set; }
+        public DbSet<TourPackage> TourPackages { get; set; }
+
+        public ApplicationDbContext(
+          DbContextOptions<ApplicationDbContext> options,
+          IDateTime dateTime) : base(options)
         {
-          _currentTransaction.Dispose();
-          _currentTransaction = null;
+            _dateTime = dateTime;
         }
-      }
-    }
 
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-      builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+        {
+            return base.SaveChangesAsync(cancellationToken);
+        }
 
-      base.OnModelCreating(builder);
+        public async Task BeginTransactionAsync()
+        {
+            if (_currentTransaction != null)
+            {
+                return;
+            }
+
+            _currentTransaction = await base.Database.BeginTransactionAsync(IsolationLevel.ReadCommitted).ConfigureAwait(false);
+        }
+
+        public async Task CommitTransactionAsync()
+        {
+            try
+            {
+                await SaveChangesAsync().ConfigureAwait(false);
+
+                _currentTransaction?.Commit();
+            }
+            catch
+            {
+                RollbackTransaction();
+                throw;
+            }
+            finally
+            {
+                if (_currentTransaction != null)
+                {
+                    _currentTransaction.Dispose();
+                    _currentTransaction = null;
+                }
+            }
+        }
+
+        public void RollbackTransaction()
+        {
+            try
+            {
+                _currentTransaction?.Rollback();
+            }
+            finally
+            {
+                if (_currentTransaction != null)
+                {
+                    _currentTransaction.Dispose();
+                    _currentTransaction = null;
+                }
+            }
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            base.OnModelCreating(builder);
+        }
     }
-  }
 }

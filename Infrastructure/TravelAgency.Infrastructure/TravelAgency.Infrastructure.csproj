@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -13,6 +13,7 @@
     <ProjectReference Include="..\..\Shared\Base.Infrastructure\Base.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Shared\Base.Resourses\Base.Resourses.csproj" />
     <ProjectReference Include="..\..\Shared\Base.Shared\Base.Shared.csproj" />
+    <ProjectReference Include="..\..\Shared\Travel.Shared\Travel.Shared.csproj" />
     <ProjectReference Include="..\TravelAgency.Data\TravelAgency.Data.csproj" />
   </ItemGroup>
 
