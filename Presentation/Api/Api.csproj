@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0-preview.6.23329.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\TravelAgency.Core\TravelAgency.Core.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\TravelAgency.Infrastructure\TravelAgency.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Shared\Base.AspCoreUtility\Base.AspCore.csproj" />
+    <ProjectReference Include="..\..\Shared\Base.Resourses\Base.Resourses.csproj" />
+    <ProjectReference Include="..\..\Shared\Base.Shared\Base.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
