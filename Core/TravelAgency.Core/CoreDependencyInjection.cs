@@ -9,7 +9,7 @@ using TravelAgency.Core.Entities;
 
 namespace TravelAgency.Infrastructure
 {
-    public static class DependencyInjection
+    public static class CoreDependencyInjection
     {
         public static IServiceCollection BootStrapApplication(this IServiceCollection services,IConfiguration configuration)
         {

@@ -13,7 +13,6 @@
     <ProjectReference Include="..\..\Shared\Base.Infrastructure\Base.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Shared\Base.Resourses\Base.Resourses.csproj" />
     <ProjectReference Include="..\..\Shared\Base.Shared\Base.Shared.csproj" />
-    <ProjectReference Include="..\..\Shared\Travel.Shared\Travel.Shared.csproj" />
     <ProjectReference Include="..\TravelAgency.Data\TravelAgency.Data.csproj" />
   </ItemGroup>
 

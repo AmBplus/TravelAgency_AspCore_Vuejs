@@ -6,7 +6,7 @@ using TravelAgency.Data.Contexts;
 
 namespace TravelAgency.Data
 {
-    public static class DependencyInjection
+    public static class DataDependencyInjection
     {
         public static IServiceCollection BootStrapInfrastructureData(this IServiceCollection services, IConfiguration configuration)
         {
